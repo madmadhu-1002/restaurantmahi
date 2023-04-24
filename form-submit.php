@@ -1,5 +1,11 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>submission of data</title>
+</head>
+<body>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "bookings@restaurant.com";
     $subject = "Table Booking Request";
     $name = $_POST["name"];
@@ -17,5 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<p>There was a problem submitting your booking request. Please try again later.</p>";
     }
-}
-?>
+    }
+    ?>
+
+</body>
+</html>
