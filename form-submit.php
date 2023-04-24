@@ -1,13 +1,13 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "bookings@restaurant.com";
     $subject = "Table Booking Request";
-    $name = $_GET["name"];
-    $email = $_GET["email"];
-    $phone = $_GET["phone"];
-    $date = $_GET["date"];
-    $time = $_GET["time"];
-    $guests = $_GET["guests"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $date = $_POST["date"];
+    $time = $_POST["time"];
+    $guests = $_POST["guests"];
     $message = "Table booking request details:\n\nDate: $date\nTime: $time\nNumber of guests: $guests\n";
     $message .= "Guest name: $name\nEmail: $email\nPhone: $phone\n";
     $headers = "From: $email";
